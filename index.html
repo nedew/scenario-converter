@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script type="text/javascript" src="app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>シナリオコンバーター</title>
+</head>
+<body>
+  <h1>シナリオコンバーター</h1>
+  <form name="converterForm" onsubmit="hujiwaraConverter()" action="javascript:void(0)">
+    <p>
+      ここに変換したい文字列を入力して「変換」ボタンを押して下さい<br>
+      (spaceを含めると文字数が意図しない数値になる可能性があります)：<br>
+      <textarea name="original_string" rows="9"" cols="90"></textarea>
+    </p>
+    <p>現時点のテキストの文字数：<input type="number" name="nowScenarioLength"></p>
+    <p>
+      <input type="submit" value="変換">
+    </p>
+  </form>
+  <p id="displayTextArea">[ここに変換されたテキストが表示されます]</p>
+  <p id="displayCodeArea">[ここに文字を描写するコードが表示されます]</p>
+  <script>
+    /*function hujiwaraConverter() {
+      const form = document.converterForm;
+      let originText = form.original_string.value;
+      let hujiwaraText = "";
+      for(let i = 0; i < originText.length; i++){
+        hujiwaraText += ("\"" + originText[i] + "\",");
+      }
+      document.getElementById("displayTextArea").textContent=hujiwaraText;
+    }*/
+  </script>
+</body>
+</html>
